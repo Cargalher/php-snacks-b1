@@ -28,6 +28,14 @@ function getEmail($writen_email){
     return (strpo($writen_email, '.') !== false && strpos ($writen_email, '@') !==false);
 }
 
+// age(number)
+
+$ageRight = getAge($age);
+
+function getAge($writen_age){
+    return(is_numeric($writen_age)&& $written_age > 0 && $writen_age < 110);
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -40,7 +48,7 @@ function getEmail($writen_email){
 <body>
 <p>
  <?php 
-    if($nameRight && $emailRight){
+    if($nameRight && $emailRight && $ageRight){
         echo "Accesso riuscito";
     }else{
         echo "Accesso negato";
