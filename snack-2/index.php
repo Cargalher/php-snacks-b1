@@ -8,17 +8,24 @@ Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato” 
 
 var_dump($_GET);
 $_GET['name'];
-// $_GET['mail'];
-// $_GET['age'];
+$_GET['email'];
+$_GET['age'];
 
 // name > 3 caracters
-$nameLonger = getName($name);
-$nameLonger = (strlen($name) > 3);
-
-
+$nameRight = getName($name);
+// $nameRight = (strlen($name) > 3);
 
 function getName($writen_name){
     return strlen($writen_name)>3;
+}
+
+// email .dot and @at
+
+$emailRight = getEmail($email);
+// $emailRight = (strpos($email, '.') !== false && strpos($email, '@') !== false);
+
+function getEmail($writen_email){
+    return (strpo($writen_email, '.') !== false && strpos ($writen_email, '@') !==false);
 }
 
 ?>
@@ -33,7 +40,7 @@ function getName($writen_name){
 <body>
 <p>
  <?php 
-    if($nameLonger){
+    if($nameRight && $emailRight){
         echo "Accesso riuscito";
     }else{
         echo "Accesso negato";
