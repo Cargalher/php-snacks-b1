@@ -65,16 +65,20 @@ echo "</pre>";
 
 <body>
 <h1>Posts List</h1>
-    
-    <?php 
-          
-          
-
-
-
-          
+<div class="posts">
+    <?php for ($i = 0; $i < count($posts); $i++) {
+      var_dump($posts[$i]);
+      $post = $posts[$i];
     ?>
-   
+      <div class="card">
+        <h2><?php echo $post['title']; ?></h2>
+        <h4><?php echo $post['subtitle']; ?></h4>
+        <p><?php echo $post['body']; ?></p>
+      </div>
+
+    <?php }
+    ?>
+</div>
 
 </body>
 </html>
