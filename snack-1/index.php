@@ -38,7 +38,10 @@ $matches = [
     
 
 ];
+echo "<pre>";
 var_dump($matches);
+echo "</pre>";
+
 
 ?>
 
