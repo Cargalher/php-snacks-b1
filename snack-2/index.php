@@ -21,11 +21,6 @@ $_GET['age'];
     <title>Verify data</title>
 </head>
 <body>
-    <form action="#" method="">
-        <input type="text" name="name" id="username">
-        <input type="text" name="mail" id="mail">
-        <input type="text" name="age" id="age">
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+    
 </body>
 </html>
