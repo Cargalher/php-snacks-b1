@@ -53,15 +53,20 @@ echo "</pre>";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basketball Match</title>
 </head>
+<style>
+    span{
+        line-height:30px;
+    }
+</style>
 <body>
     <h1> 🏀⛹️‍♂️ NBA MATCHES ⛹️‍♂️🏀</h1>
     <span>
         <?php 
-            echo $matches[0][0]."-".$matches [0][1]."|".$matches [0][2]."-".$matches [0][3]."<br>";
-            echo $matches[1][0]."-".$matches [1][1]."|".$matches [1][2]."-".$matches [1][3]."<br>";
-            echo $matches[2][0]."-".$matches [2][1]."|".$matches [2][2]."-".$matches [2][3]."<br>";
-            echo $matches[3][0]."-".$matches [3][1]."|".$matches [3][2]."-".$matches [3][3]."<br>";
-            echo $matches[4][0]."-".$matches [4][1]."|".$matches [4][2]."-".$matches [4][3]."<br>";
+            echo $matches[0]["home"]." - ".$matches [0]["visitor"]." | ".$matches [0]["homeScore"]." - ".$matches [0]["visitorScore"]."<br>";
+            echo $matches[1]["home"]." - ".$matches [1]["visitor"]." | ".$matches [1]["homeScore"]." - ".$matches [1]["visitorScore"]."<br>";
+            echo $matches[2]["home"]." - ".$matches [2]["visitor"]." | ".$matches [2]["homeScore"]." - ".$matches [2]["visitorScore"]."<br>";
+            echo $matches[3]["home"]." - ".$matches [3]["visitor"]." | ".$matches [3]["homeScore"]." - ".$matches [3]["visitorScore"]."<br>";
+            echo $matches[4]["home"]." - ".$matches [4]["visitor"]." | ".$matches [4]["homeScore"]." - ".$matches [4]["visitorScore"]."<br>";
 
         ?>
     </span>
