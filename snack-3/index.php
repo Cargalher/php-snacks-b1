@@ -64,10 +64,16 @@ echo "</pre>";
 </head>
 
 <body>
+<h1>Posts List</h1>
     
-        <?php 
-           
-        ?>
+    <?php 
+          
+          
+
+
+
+          
+    ?>
    
 
 </body>
