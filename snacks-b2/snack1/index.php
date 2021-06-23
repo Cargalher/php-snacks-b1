@@ -33,20 +33,14 @@ $ads = [
 
 ];
 
-foreach ($ads as $key => $value) {
-    
-   
-    if($key ['is_active'] == 'true'){
-        echo $value;
-    }else{
-       
-    }
-}
-echo "<pre>";
-    var_dump($key);
-    var_dump($value);
-echo"</pre>";
+$active_ads = array_filter($ads, function ($val){
+    return $val['is_active'];
+
+});
+
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,7 +50,6 @@ echo"</pre>";
     <title>Document</title>
 </head>
 <body>
-    
+    <img src="<?php echo $active_Ads[1]['image_path']; ?>" alt="">
 </body>
 </html>
-
