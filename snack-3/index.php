@@ -45,9 +45,8 @@ $posts = [
     ],
 ];
 
-echo "<pre>";
-var_dump($posts);
-echo "</pre>";
+$keys = array_keys($posts);
+
 
 ?>
 
@@ -64,10 +63,22 @@ echo "</pre>";
 </head>
 
 <body>
-<h1>Posts List</h1>
-<div class="posts">
+<h1>PHP Blog</h1>
+
+<?php 
+    for ($i=0; $i < count ($keys); $i++) { 
     
-</div>
+        $key = $keys[$i];
+        var_dump(key);
+        var_dump($posts[$key]);
+    
+        for    ($j=0; $j < count ($posts[$key]);$j++){
+
+            $post = $posts[$key][$j];
+        }
+    }
+?>
+
 
 </body>
 </html>

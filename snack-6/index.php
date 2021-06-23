@@ -24,9 +24,9 @@
             ]
         ]
     ];
-echo"<pre>";
- var_dump($db);
-echo"</pre>";
+// echo"<pre>";
+//  var_dump($db);
+// echo"</pre>";
   
  
 ?>
@@ -38,18 +38,45 @@ echo"</pre>";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .gray{
+            background-color:gray;
+        
+        }
+        .green{
+            background-color:green;
+        }
+    
+    </style>
 </head>
 <body>
     
    
-    <div class="teacher">
     <?php
-    echo $db[0][1];
+        $roles = array_keys($db);
+        echo "<pre>";
+        var_dump($roles);
+        echo "</pre>";
+        for ($i=0; $i < count($db); $i++) { 
+           
+            $role= $roles[$i];
     ?>
-    </div>
-     
-    <div class="pm">
-    </div>
+        <div class="<?php echo $role =='teachers' ? 'gray' :'green' ;?>">
+            <?php
+                for ($j=0; $j < count($db[$role]) ; $j++) { 
+                    $user =$db[$role][$j];
+             ?>  
+             <p><?php echo $user['name'] . ' ' . $user['lastname'];?></p>     
+                }
+            
+        </div>
+            }
+
+        }
+
+
+
+    ?>
     
     
    

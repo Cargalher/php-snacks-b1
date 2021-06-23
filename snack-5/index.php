@@ -8,5 +8,7 @@
     var_dump($quoteDivided);
     echo "</pre>";
     
- 
+ for ($i=0; $i < count($quote) ; $i++) { 
+   $quote = $quotes[$i];
+ }
  ?>

@@ -29,7 +29,7 @@ if (strlen($name) > 3 && strpos($email, ".") != false && strpos($email, "@") != 
 <body>
     <h1>Insert your name, email and age</h1>
     <p>
-        <?php echo $access?>
+        <?php echo $access ?>
     </p>
    
 </body>
