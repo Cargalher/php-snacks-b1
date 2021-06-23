@@ -11,29 +11,10 @@ $_GET['name'];
 $_GET['email'];
 $_GET['age'];
 
-// name > 3 caracters
-$nameRight = getName($name);
-// $nameRight = (strlen($name) > 3);
-
-function getName($writen_name){
-    return strlen($writen_name)>3;
-}
-
-// email .dot and @at
-
-$emailRight = getEmail($email);
-// $emailRight = (strpos($email, '.') !== false && strpos($email, '@') !== false);
-
-function getEmail($writen_email){
-    return (strpo($writen_email, '.') !== false && strpos ($writen_email, '@') !==false);
-}
-
-// age(number)
-
-$ageRight = getAge($age);
-
-function getAge($writen_age){
-    return(is_numeric($writen_age)&& $written_age > 0 && $writen_age < 110);
+if (strlen($name) > 3 && strpos($email, ".") != false && strpos($email, "@") != false && is_numeric($age)) {
+    $access = "Accesso Riuscito";
+} else {
+    $access = "Accesso negato";
 }
 
 ?>
@@ -46,16 +27,10 @@ function getAge($writen_age){
     <title>Verify data</title>
 </head>
 <body>
-<p>
- <?php 
-    if($nameRight && $emailRight && $ageRight){
-        echo "Accesso riuscito";
-    }else{
-        echo "Accesso negato";
-    }
-    
-    ?>
-</p>
+    <h1>Insert your name, email and age</h1>
+    <p>
+        <?php echo $access?>
+    </p>
    
 </body>
 </html>
