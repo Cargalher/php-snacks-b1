@@ -17,11 +17,11 @@ var_dump($_GET);
     <title>Document</title>
 </head>
 <body>
-<form action="#" method="post">
-    <input type="text" name="username" id="username">
-    <input type="text" name="password" id="password">
+<form action="./server.php" method="get">
+    <input type="text" name="guest" id="guest">
+    
 
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" >Submit</button>
   </form>
 </body>
 </html>

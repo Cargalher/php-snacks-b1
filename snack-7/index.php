@@ -22,9 +22,9 @@
         ]
     ];
     
-    echo"<pre>";
-    var_dump($students);
-    echo"</pre>";
+    // echo"<pre>";
+    // var_dump($students);
+    // echo"</pre>";
  
  
  ?>

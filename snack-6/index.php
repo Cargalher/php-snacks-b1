@@ -67,7 +67,7 @@
                     $user =$db[$role][$j];
              ?>  
              <p><?php echo $user['name'] . ' ' . $user['lastname'];?></p>     
-                }
+               
             
         </div>
             }
@@ -76,8 +76,7 @@
 
 
 
-    ?>
-    
+  
     
    
 </body>
